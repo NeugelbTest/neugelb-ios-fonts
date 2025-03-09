@@ -4,7 +4,7 @@ import SwiftUI
 import UIKit
 
 struct NeugelbFontsTests {
-    
+
     @Test
     func testBrandingFontWithUIFont() {
         for weight in NeugelbFonts.FontWeightName.allCases {
@@ -13,7 +13,7 @@ struct NeugelbFontsTests {
             #expect(font.fontName == weight.rawValue, "UIFont name should match expected name")
         }
     }
-    
+
     @Test
     @available(iOS 13.0, *)
     func testBrandingFontWithSwiftUIFont() {
@@ -22,13 +22,13 @@ struct NeugelbFontsTests {
             #expect(font != nil, "SwiftUI Font should not be nil for weight: \(weight.rawValue)")
         }
     }
-    
+
     @Test
     func testConfigureFonts() {
         NeugelbFonts.configureFonts()
         #expect(true, "configureFonts() executed without crashing")
     }
-    
+
     @Test
     func testFontWeightNames() {
         let expectedWeights: [NeugelbFonts.FontWeightName: String] = [
@@ -39,7 +39,7 @@ struct NeugelbFontsTests {
             .extraBold: "SuisseIntl-Black",
             .light: "SuisseIntl-Light"
         ]
-        
+
         for (weight, expectedName) in expectedWeights {
             #expect(weight.rawValue == expectedName, "Font weight name mismatch for: \(weight)")
         }

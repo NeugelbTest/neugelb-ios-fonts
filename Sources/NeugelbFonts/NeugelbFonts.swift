@@ -2,7 +2,7 @@ import SwiftUI
 import UIKit
 
 public struct NeugelbFonts {
-    
+
     public enum FontWeightName: String, CaseIterable {
         case regular = "SuisseIntl"
         case semibold = "SuisseIntl-SemiBold"
@@ -34,7 +34,7 @@ public struct NeugelbFonts {
     public static func brandingFontWith(weight: FontWeightName = .regular, size: Int) -> Font {
         .custom(weight.rawValue, size: CGFloat(size))
     }
-    
+
     /**
      Registers default font family
      */
@@ -64,5 +64,5 @@ private extension NeugelbFonts {
             print("*** [Neugelb] ERROR: \(errorRef.debugDescription) ***")
         }
     }
-    
+
 }

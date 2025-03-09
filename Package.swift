@@ -10,7 +10,7 @@ let package = Package(
     products: [
         .library(
             name: "NeugelbFonts",
-            targets: ["NeugelbFonts"]),
+            targets: ["NeugelbFonts"])
     ],
     targets: [
         .target(
@@ -20,6 +20,6 @@ let package = Package(
         .testTarget(
             name: "NeugelbFontsTests",
             dependencies: ["NeugelbFonts"]
-        ),
+        )
     ]
 )
